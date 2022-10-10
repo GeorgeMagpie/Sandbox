@@ -1,18 +1,21 @@
 fun main() {
-    val z: Double
+    var z: Double
     println("Привет юзвер")
-    println("Введите первое число")
-    val x = readln().toDoubleOrNull()
-    println("Введите второе число")
-    val y = readln().toDoubleOrNull()
-    println("Выберете оператор: +, -, * или /")
-    val i = readln()
-    if (x == null || y == null || i.isEmpty()){
-        println("Введите корректные данные")
-    } else {
-         z = calc(x, y, i)
-        println(" Ваш результат $z")
+    while (true){
+        println("Введите первое число")
+        val x = readln().toDoubleOrNull()
+        println("Введите второе число")
+        val y = readln().toDoubleOrNull()
+        println("Выберете оператор: +, -, * или /")
+        val i = readln()
+        if (x == null || y == null || i.isEmpty()){
+            println("Введите корректные данные")
+        } else {
+            z = calc(x, y, i)
+            println(" Ваш результат $z")
+        }
     }
+
 }
 
  fun calc(x: Double, y: Double, i: String): Double{

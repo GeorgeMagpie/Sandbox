@@ -30,4 +30,11 @@ fun makeCoffee(coffeeShop: CoffeeShop){
             exitProcess(1)
         }
     }
+
+    if (coffeeShop is Cookies){
+        println("Хотиту печенюшку??\n 1. Хочу\n 2. Не хочу")
+        when(readln()){
+            "1" -> coffeeShop.sellCookies()
+        }
+    }
 }

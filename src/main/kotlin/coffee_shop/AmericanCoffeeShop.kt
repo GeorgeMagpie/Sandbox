@@ -1,7 +1,7 @@
 package coffee_shop
 
 class AmericanCoffeeShop(americanoPrise: Double, cappuccinoPrice: Double, lattePrice: Double) :
-    CoffeeShop(americanoPrise, cappuccinoPrice, lattePrice) {
+    CoffeeShop(americanoPrise, cappuccinoPrice, lattePrice), Cookies {
 
     override fun makeAmericano() {
         americanoCounter++
@@ -16,5 +16,9 @@ class AmericanCoffeeShop(americanoPrise: Double, cappuccinoPrice: Double, latteP
     override fun makeCappuccino() {
         cappuccinoCounter++
         println("Спасибо за покупку капучино в Америке!")
+    }
+
+    override fun sellCookies() {
+        println("У нас замечательные печеньки. Спасибо за покупку")
     }
 }

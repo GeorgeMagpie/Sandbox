@@ -1,4 +1,9 @@
+
+
+
 fun main() {
+
+
     var z: Double
     println("Привет юзвер")
     while (true){
